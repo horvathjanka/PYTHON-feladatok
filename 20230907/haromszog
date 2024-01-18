@@ -1,0 +1,18 @@
+import math
+
+a_oldal = int(input( 'A háromszög a oldala:'))
+b_oldal = int(input( 'A háromszög b oldala:'))
+c_oldal = int(input( 'A háromszög c oldala:'))
+
+#logikai operátorok: És: and Vagy: or TAGADÁS: not
+if a_oldal > b_oldal > c_oldal and b_oldal < a_oldal + c_oldal and c_oldal < b_oldal + a_oldal:
+    kerulet = a_oldal + b_oldal + c_oldal 
+    print(f'A háromszög kerülete: {kerulet}')
+    # print(f'A háromszög kerülete: {a_oldal + b_oldal + c_oldal}')
+
+    s = kerulet / 2
+    terulet = math.sqrt(s * (s - a_oldal) * (s - b_oldal) * (s - c_oldal))
+    print(f'A háromszög területe: {terulet}')
+    
+else:
+    print('A megadott adatokból nem szerkesztthető háromszög!')

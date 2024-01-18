@@ -1,0 +1,11 @@
+szam = float(input(' Kérek egy számot: '))
+
+#Összehasonlító operátorok: <> <= >== ! =
+if szam > 0:
+    print(f' A szám abszolút értéke: {szam}')
+else:
+    # print(f'A szám abszolút értéke: {szam * -1}')
+    print(f' A szám abszolút értéke: {-szam}')
+    print('Ez még benne van az else ágban')
+print('Ez már nincs benne az else ágban!!!')
+    

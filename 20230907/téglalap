@@ -1,0 +1,15 @@
+a_oldal = int(input("A téglalap '\a\' oldala: "))
+# b_oldal = input('A téglalap "b" oldala: ')
+b_oldal = int(input("A téglalap 'b' oldala: "))
+
+#terulet = int(a_oldal) * int(b_oldal)
+terulet = a_oldal + b_oldal
+# print('A téglalap területe: ', terulet)
+# Komment: Ctrl+K+C
+print(f'A téglalap területe: {terulet}')
+
+kerulet = (a_oldal + b_oldal) * 2
+print(f'A téglalap kerülete: {kerulet}')
+
+# print('alma' * 5) = ilyet is lehet
+
