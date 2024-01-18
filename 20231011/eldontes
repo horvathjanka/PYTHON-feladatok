@@ -1,0 +1,36 @@
+# # Döntsük le hogy van e 13-mal osztható szám a listában
+#Válasz: igen vagy nem
+# A keresést ne folytassa, ha választ meg tudja adni
+
+from random import randint
+
+szamok = [11, 26, 33, 12]
+# for i in range(100):
+#    szamok.append(randint(-100,100))
+print(szamok)
+
+
+# Megoldások v1:
+#Hivatalos algoritmus(minden prog. nyelven megvalósitható)
+index = 0
+while index < len(szamok) and szamok[index] % 13 != 0:
+    # while feltétele: index kisebb mint az elemszám és az aktuális ele Nem felel meg a feltételnek
+    index += 1
+if index == len(szamok):
+    print('Nincs 13-mal osztható elem a listában')
+else:
+    print('Van 13-mal osztható szám.')
+
+# Megoldás v2: 
+# Python only
+for szam in szamok:
+    if szam % 13 == 0:
+        print('Van 13-mal osztható elem a listában')
+        break
+else: # az else ágba akor megy bele ha a for ágban hajtódott végre a break
+    print('Nincs 13-mal osztható elem a listában')
+
+# todo: Megoldás v3:
+# saját függvény irásával és return használatával 
+
+
