@@ -1,0 +1,38 @@
+#a = 1
+#b = 21 
+#c = 23
+#d = 13
+
+
+#lista közöd név alatt, sorszámmal indenyelve tárolunk elemeket
+szamok = [111, 21, 23, 13]
+szinek = ['piros', 'fehér', 'zöld']
+
+#Lista elemeinek elérése
+print(szamok) # teljes lista kiiratása
+print(szamok, sep='-')
+
+print(f'A lista 1-es indexű eleme: {szamok[1]}')
+
+# A lista indexelés 0-val kezdődik
+print(f'a lista legelső eleme: {szamok[0]}')
+
+# A lista utolsó eleme
+print(f'A lista utolsó eleme: {szamok[-1]}')
+
+# A lista elemszáma
+print(f'{len(szamok)} darab elem van a listában.')
+print(f'A lista utolsó eleme: {szamok[len(szamok)-1]}')
+
+#lista bejárása, ha szükségem van a ciklusban az indexre 
+for i in range(len{szamok}): # S elemű lista esetén: {0, 1, 2, 3, 4} tartományt kapunk.
+    print(f'A lista {i}. eleme: {szamok[i]}')
+
+# Lista bejárása, ha csak az elemekre van szükség
+for szam in szamok:
+    print(szam)
+
+for szin in szinek:
+    print(szin)
+
+
