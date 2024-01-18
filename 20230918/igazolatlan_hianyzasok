@@ -1,0 +1,26 @@
+# Készítsünk programot, amely beolvassa egy diák igazolatlan hiányzásainak számát.
+# Ennek megfelelően írassuk ki a magatartás jegyét.
+# 1-5 ofő figyelmeztetés
+# 6-10 osztályfönöki intő
+# 11-35 igazgatói megrovás
+# 35 fölött, ha elmúlt 16 éves (nes tanköteles) -> kirúgás
+# egyébként családi pótlék megvonás.
+
+aktualis_ev = 2023
+
+hianyzasok_szama = int(input("Hiányzások száma: "))
+if hianyzasok_szama == 0:
+   #pass
+    print('Csak így tovább!')
+elif hianyzasok_szama <= 5:
+    print('Osztályfőnöki figyelmeztetés')
+elif hianyzasok_szama <= 10:
+    print('Osztályfőnöki megrovás')
+elif hianyzasok_szama <= 35:
+    print('igazgatói megróvás')
+else:
+    szuletes_ev = int(input('Születési év: '))
+    if aktualis_ev - szuletes_ev > 16:
+        print('Ki van rúgva')
+    else: 
+        print('Családi pótlék megvonás')

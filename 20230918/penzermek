@@ -1,0 +1,18 @@
+# Dobjunk fel egy pénzérmét 100-szor, és mondjuk meg hogy fej vagy írás volt-e többször!
+
+from random import randint
+
+fej_db = 0
+iras_db = 0
+for i in range(100):
+    dobas = randint(0,1) # 0 = fej, 1 = íás
+    if dobas == 0:
+        print('fej')
+        fej_db += 1
+    else:
+        print('írás')
+        iras_db += 1
+print(f'Fejek száma: {fej_db}, írások száma: {iras_db}')
+
+
+

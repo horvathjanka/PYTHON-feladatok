@@ -1,0 +1,65 @@
+# Generáljon egy 4 jegyű PIN kódot
+# Kérjük be a felhasználótól a PIN kódot.
+# Maximum 3 próbálokozás lehet.
+# Ha nem találja el, akkor írjuk ki, hogy hibás.
+# és hogy hány próbálozás maradt még.
+# Három sikertelen próbálkozás próbákozás után ki hogy "Zárolás",
+# egyébként Sikeres azonosítás".
+
+
+
+#v1: Ha a PIN Kód helyett egy mesterkódot ad meg,(legyen: 123456)
+#  akkor tudja megváltoztatni a PIN kódját.
+
+
+from random import randint
+
+MESTER_PIN = '123456'
+
+#v1: nem lehet benne az elején
+# pin = randint(1000,999)
+# pin = randint(1000, 9999)
+#for i in range(4):
+   #szamjegy = randint(0, 9)
+   #pin += str(szamjegy) 
+#print(pin)
+
+#v2 
+# pin = ''
+#    szamjegy = randint(0, 1)
+#    pin += str(szamjegy)
+# print(pin)
+
+#v3
+num_pin = str(randint(0, 9999))
+# pin = num_pin.zfill(4)
+jo_pin = num_pin.zfill(4)
+print(jo_pin)
+
+megadott_pin = ''
+probalkozasok_szama = 3
+while jo_pin != megadott_pin and probalkozasok_szama > 0:
+   megadott_pin = input('Adja meg a PIN kódját: ')
+   probalkozasok_szama -= 1
+   if megadott_pin == MESTER_PIN:
+      # v1: print('Mester kód került megadásra. A helyes PIN kód: jo_pin}')
+      # v2: 
+      print('Mester kód került megadásra')
+      uj_pin = input('Adja meg az új PIn kódját: ')
+      uj_pin2 = input('Adja meg az új PIn kódját mégegyzser: ')
+      if uj_pin == uj_pin2:
+         jo_pino_pin = uj_pin
+         print('PIN kódját megváltoztatta')
+         probalkozasok_szama = 3
+      else:      
+         print('A megadott kér PIN kód nem egyezik meg. PIN kódja nem változott!')
+   elif jo_pin != megadott_pin:
+      print(f'Hibás PIN kód. Hátralévő próbálkozások száma: {probalkozasok_szama}')    
+
+if jo_pin != megadott_pin:
+   print('Kártyáját zároltuk')
+else: 
+   print('Sikeres azonosítás')
+   
+   
+

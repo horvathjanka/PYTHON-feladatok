@@ -1,0 +1,19 @@
+# Készítsen konzolos alkalmazást amely mezőgazdasági jóslást végez.
+# A program kérje be az elvetett búza mennyiséget tonnában!
+# Ez alapján számolja ki a egy véletlenszerű geberált szorzóval (5-15)
+# a várható hozamot, és írja ki a mennyiségét!
+# a szorzó alapján elemezze és írja ki, hogy milyen volt az adott év:
+# átlag alatti (5-8), átlagos év  (9,12), átlag feletti (13-15)!
+
+from math import randint
+
+elvetett_mennyiseg = float(input('Mennyi az elvettet búza mennyisége?: '))
+szorzo = randint(5, 15)
+print(f'A termés mennyisége: {elvetett_mennyiseg * szorzo} tonna')
+
+if szorzo <= 8:
+    print('Az év termése átlag alatti.')
+elif szorzo <= 12:
+    print('Az év termése átlagos.')
+else: 
+    print('Az év termése átlag feletti.')
